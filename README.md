@@ -97,6 +97,9 @@ mean editdistance             0.332
 mean normalized editdistance  0.081  
 character recogniton rate     0.916  
 word recognition rate         0.861  
+parameters                8,747,351  
+model size                    34 MB  
+runtime (GPU)      114 ms ± 2.75 ms  
 
 #### [CRNN with GRU](http://83.169.39.135/ssd_detectors/201806190711_crnn_gru_synthtext.zip)
 trained and tested on cropped word level bounding boxes form SynthText  
@@ -104,6 +107,20 @@ mean editdistance             0.333
 mean normalized editdistance  0.081  
 character recogniton rate     0.916  
 word recognition rate         0.858  
+parameters                7,959,895  
+model size                    31 MB  
+runtime (GPU)     85.1 ms ± 1.19 ms  
+
+#### [CRNN with CNN](http://83.169.39.135/ssd_detectors/202001111100_crnn_cnn_synthtext.zip)
+trained and tested on cropped word level bounding boxes form SynthText  
+mean editdistance             0.364  
+mean normalized editdistance  0.088  
+character recogniton rate     0.908  
+word recognition rate         0.841  
+parameters                7,877,719  
+model size                    31 MB  
+runtime (GPU)     3.68 ms ± 24.5 µs  
+
 
 ## Demo images
 

@@ -614,7 +614,7 @@ def preprocess(img, size):
         size: Target image size (height, width).
     
     # Return
-        Resized and mean subtracted BGR image, if input was also BGR.
+        Resized and mean subtracted BGR image.
     """
     h, w = size
     img = np.copy(img)

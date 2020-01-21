@@ -42,7 +42,9 @@ def CRNN(input_shape, num_classes, prediction_only=False, gru=False, cnn=False):
     if cnn:
         for i in range(6):
             x = BatchNormalization()(x)
-            x = Conv1D(256, 5, strides=1, dilation_rate=1+(i+1)%2, padding='same', activation=act)(x)
+            x1 = Conv1D(128, 5, strides=1, dilation_rate=1, padding='same', activation=act)(x)
+            x2 = Conv1D(128, 5, strides=1, dilation_rate=2, padding='same', activation=act)(x)
+            x = concatenate([x1,x2])
     elif gru:
         x = Bidirectional(GRU(256, return_sequences=True))(x)
         x = Bidirectional(GRU(256, return_sequences=True))(x)
